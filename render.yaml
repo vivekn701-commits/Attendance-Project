@@ -31,10 +31,10 @@ services:
         sync: false
       - key: INITIAL_HR_PASSWORD
         sync: false
-      # Email: leave EMAIL_MODE=console to send nothing. Render's free plan blocks outgoing SMTP, so use
-      # EMAIL_MODE=brevo with BREVO_API_KEY (an HTTPS API); smtp works on paid plans.
+      # Email goes through Brevo's HTTPS API (Render's free plan blocks outgoing SMTP). Needs SENDER_MAILBOX
+      # (a sender verified in Brevo) and BREVO_API_KEY. Set to console to send nothing.
       - key: EMAIL_MODE
-        value: console
+        value: brevo
       - key: SENDER_MAILBOX
         sync: false
       - key: BREVO_API_KEY

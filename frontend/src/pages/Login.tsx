@@ -2,6 +2,7 @@ import { KeyRound, Mail } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { Navigate, useSearchParams } from "react-router-dom";
 import { api, links } from "../api";
+import { BrandLockup } from "../components/Layout";
 import { Alert, Spinner } from "../components/ui";
 import { useRefreshSession, useSession } from "../session";
 
@@ -38,7 +39,7 @@ export function LoginPage() {
   return (
     <div className="login-page">
       <aside className="login-hero">
-        <div className="brand"><img src="/favicon.svg" alt="" /><span>Attendance Portal</span></div>
+        <div className="brand-card"><BrandLockup /></div>
         <div>
           <h1>Monthly attendance, reviewed by the people who know their teams.</h1>
           <p>HR uploads the SAP file once. Every manager checks their own team's days, and HR downloads the finished workbook.</p>

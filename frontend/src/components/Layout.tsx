@@ -5,6 +5,16 @@ import { useState, type ReactNode } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { api } from "../api";
 import { useSession } from "../session";
+
+/** The Syngene logo with "Attendance Portal" in small letters under it. */
+export function BrandLockup() {
+  return (
+    <span className="brand-lockup">
+      <img src="/syngene-logo.png" alt="Syngene" />
+      <span>Attendance Portal</span>
+    </span>
+  );
+}
 import type { User } from "../types";
 import { useToast } from "./toast";
 
@@ -32,7 +42,7 @@ export function Layout({ user, wide = false, children }: { user: User; wide?: bo
   return (
     <div className="app">
       <header className="topbar">
-        <Link to="/" className="brand"><img src="/favicon.svg" alt="" /><span>Attendance Portal</span></Link>
+        <Link to="/" className="brand" aria-label="Syngene Attendance Portal, home"><BrandLockup /></Link>
         {user.is_hr && (
           <nav className="nav" aria-label="Main">
             <NavLink to="/hr" end>Cycles</NavLink>
