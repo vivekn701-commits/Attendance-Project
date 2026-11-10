@@ -39,16 +39,7 @@ export function LoginPage() {
   return (
     <div className="login-page">
       <aside className="login-hero">
-        <div className="brand-card"><BrandLockup /></div>
-        <div>
-          <h1>Monthly attendance, reviewed by the people who know their teams.</h1>
-          <p>HR uploads the SAP file once. Every manager checks their own team's days, and HR downloads the finished workbook.</p>
-          <div className="login-steps">
-            <div><span>1</span>HR uploads the SAP export with SAP and HC_Teamlease.</div>
-            <div><span>2</span>The portal builds TO CONSIDER and marks every day P, A, OFF or PH.</div>
-            <div><span>3</span>Managers correct their team; HR downloads the updated Excel.</div>
-          </div>
-        </div>
+        <div className="login-logo"><BrandLockup /></div>
         <small className="hero-foot">For company use only. Sign in with your work account.</small>
       </aside>
 
